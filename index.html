@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification Component</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Verify your email address</h2>
+        <p>A fouro-digit code has been sent to your email name@example.com</p>
+        <div class="nums_container">
+            <input type="text" maxlength="1" required oninput="handleInput(1, event)" onkeydown="prevInput(1, event)">
+            <input type="text" maxlength="1" required disabled oninput="handleInput(2, event)" onkeydown="prevInput(2, event)">
+            <input type="text" maxlength="1" required disabled oninput="handleInput(3, event)" onkeydown="prevInput(3, event)">
+            <input type="text" maxlength="1" required disabled oninput="handleInput(4, event)" onkeydown="prevInput(4, event)">
+        </div>
+        <button id="verify" disabled>Verify OTP</button>
+    </div>
+    <div id="success">congrats, You have the correct code</div>
+</body>
+</html>
